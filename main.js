@@ -2,8 +2,8 @@ var dialLines = document.getElementsByClassName('diallines');
 var clockEl = document.getElementsByClassName('clock')[0];
 
 for (var i = 1; i < 60; i++) {
-  clockEl.innerHTML += "<div class='diallines'></div>";
-  dialLines[i].style.transform = "rotate(" + 6 * i + "deg)";
+    clockEl.innerHTML += "<div class='diallines'></div>";
+    dialLines[i].style.transform = "rotate(" + 6 * i + "deg)";
 }
 
 function clock() {
@@ -43,8 +43,7 @@ function clock() {
   hEl.style.transform = "rotate("+hDeg+"deg)";
   mEl.style.transform = "rotate("+mDeg+"deg)";
   sEl.style.transform = "rotate("+sDeg+"deg)";
-  dateEl.innerHTML = date;
-  dayEl.innerHTML = day;
+  $$('#daybox').set('html', date);
 }
 
 setInterval("clock()", 100);
