@@ -34,7 +34,7 @@ function clock() {
       dateEl = document.querySelector('.date'),
       dayEl = document.querySelector('.day');
   
-      var day = weekday[d.getDay()];
+      var day = weekday[d.getDay()].substring(0, 3);
   
   if(month < 9) {
     month = "0" + month;
@@ -43,7 +43,7 @@ function clock() {
   hEl.style.transform = "rotate("+hDeg+"deg)";
   mEl.style.transform = "rotate("+mDeg+"deg)";
   sEl.style.transform = "rotate("+sDeg+"deg)";
-  dateEl.innerHTML = date+"/"+month+"/"+year;
+  dateEl.innerHTML = date;
   dayEl.innerHTML = day;
 }
 
